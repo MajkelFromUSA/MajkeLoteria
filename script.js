@@ -47,5 +47,6 @@ const rewardCards = document.querySelectorAll("[data-expand='reward']");
 rewardCards.forEach((card) => {
   card.addEventListener("click", () => {
     card.classList.toggle("expanded");
+    card.setAttribute("aria-expanded", card.classList.contains("expanded"));
   });
 });
