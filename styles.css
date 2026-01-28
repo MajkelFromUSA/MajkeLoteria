@@ -1,0 +1,327 @@
+:root {
+  color-scheme: dark;
+  --bg: #05070c;
+  --bg-secondary: #0b1120;
+  --card: rgba(10, 17, 34, 0.85);
+  --accent: #2b8dff;
+  --accent-glow: rgba(43, 141, 255, 0.4);
+  --text: #e6ecf7;
+  --muted: #98a4b7;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1), transparent 30%),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.08), transparent 30%);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 40px 8vw 120px;
+  background: linear-gradient(180deg, rgba(7, 12, 23, 0.95) 0%, rgba(5, 7, 12, 0.7) 100%),
+    url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80") center/cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  margin-bottom: 20px;
+  letter-spacing: 0.3rem;
+}
+
+.hero-description {
+  color: var(--muted);
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 12px 30px var(--accent-glow);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px var(--accent-glow);
+}
+
+.btn.ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(5, 7, 12, 0.5);
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 90px 8vw;
+  background: linear-gradient(180deg, rgba(5, 7, 12, 0.8) 0%, rgba(8, 13, 26, 0.9) 100%);
+  border-top: 1px solid var(--border);
+}
+
+.section-header {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.section-tag {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 0.8rem;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-top: 12px;
+}
+
+.narrative-content {
+  max-width: 820px;
+  color: var(--muted);
+  display: grid;
+  gap: 20px;
+}
+
+.section-intro {
+  max-width: 820px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card.highlight {
+  border-color: rgba(43, 141, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(43, 141, 255, 0.2);
+}
+
+.card h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.participation-content {
+  max-width: 720px;
+  color: var(--muted);
+  display: grid;
+  gap: 20px;
+}
+
+.participation-content ol {
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.selection-content {
+  max-width: 640px;
+  color: var(--muted);
+  display: grid;
+  gap: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 8vw 50px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 2;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 7, 12, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 4;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 520px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.modal-content h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 16px;
+}
+
+.modal-content p {
+  color: var(--muted);
+}
+
+.modal-content ol,
+.modal-content ul {
+  color: var(--muted);
+  padding-left: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.modal-content ul {
+  margin-top: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    margin-right: 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
