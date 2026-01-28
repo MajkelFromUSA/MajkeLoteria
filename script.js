@@ -41,3 +41,11 @@ window.addEventListener("keydown", (event) => {
     closeAllModals();
   }
 });
+
+const rewardCards = document.querySelectorAll("[data-expand='reward']");
+
+rewardCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("expanded");
+  });
+});
