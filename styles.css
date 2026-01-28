@@ -165,6 +165,12 @@ h2 {
   gap: 20px;
 }
 
+.section-intro {
+  max-width: 820px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
 .rewards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -277,6 +283,18 @@ h2 {
 
 .modal-content p {
   color: var(--muted);
+}
+
+.modal-content ol,
+.modal-content ul {
+  color: var(--muted);
+  padding-left: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.modal-content ul {
+  margin-top: 8px;
 }
 
 .modal-close {
